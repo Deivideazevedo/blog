@@ -1,0 +1,63 @@
+**Limitar tamanho de um texto com CSS (depois modifique o tamanho da div onde está o texto)
+COLOQUE ISSO NO PARAGRAFO!
+.max-lines {
+  overflow: hidden;
+  text-overflow: ellipsis; /* permite aparecer " ... " no final da ultima linha à mostra */
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Quantidade de linhas a mostrar */
+  -webkit-box-orient:vertical;
+  margin: 0;
+  padding: 0;
+  /*word-wrap: break-word;*/ /*permite quebra de linha*/
+}
+
+
+function sweetalert(){
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Usuário ou senha inválidos!',
+                    footer: '<a href="cad_user.php">Clique aqui cadastrar um novo usuário</a>',
+                    // timer: 1500 //(para um segundo e meio mostrando na tela)
+                    //showConfirmButton: false //(para tirar o botao de confirmação)
+                }).then((result) => {
+                if (result.isConfirmed) {
+                        window.location.href = "view.php";
+                }
+             });          
+            }
+
+
+ function sweetalert(){
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Usuário ou senha inválidos!',
+                    footer: '<a href="cad_user.php">Clique aqui cadastrar um novo usuário</a>',
+                    // timer: 1500 //(para um segundo e meio mostrando na tela)
+                    //showConfirmButton: false //(para tirar o botao de confirmação)
+                }).then((result) => {
+                if (result.isConfirmed) {
+                    //window.location.href = "view.php";                    
+                    //location.assign("view.php");
+                }
+             });          
+            }
+
+
+<!--  $_SERVER["PHP_SELF"] envia o post para a propia pagina -->
+<?php echo $_SERVER["PHP_SELF"];?>
+
+//colocar isso no php, se o metodo post for utilizado nesta pagina, faça isso:
+<?php
+  if($_SERVER["REQUEST_METHOD"] == "POST")
+   {   $test1 = $_POST['test1'];
+       $test2 = $_POST['test2'];
+   }
+?>
+
+BURLAR O RE-PREENCHIMENTO DOS FORMULARIOS
+na tag form:atrubuir o metodo POST e uma action="Namepage.php" para uma pagina de tratamento dos dados
+e caso os dados nao coincida com o banco de dados, coloque um header('Location: InitialPage.php'); no final
+pois fazendo isso a re-submissão já não é possível porque os dados do POST apenas ficam disponíveis num único request
+ou seja, nao haverá aquela mensagem perguntado se deseja refazer o formulario

@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+p{
+    font-family: 'Poppins', sans-serif;
+}
+
+.max-lines {
+    
+    overflow: hidden;
+    text-overflow: ellipsis; /* permite aparecer " ... " no final da ultima linha à mostra */
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Quantidade de linhas a mostrar */
+    -webkit-box-orient:vertical;
+    margin: 0;
+    padding: 0;
+    /*word-wrap: break-word;*/ /*permite quebra de linha*/
+}
+.max-lines2 {
+    
+    overflow: hidden;
+    text-overflow: ellipsis; /* permite aparecer " ... " no final da ultima linha à mostra */
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Quantidade de linhas a mostrar */
+    -webkit-box-orient:vertical;
+    margin: 0;
+    padding: 0;
+    /*word-wrap: break-word;*/ /*permite quebra de linha*/
+}
+
+#imgBanner{
+    height: 400px;
+}
+.logo{
+    width: 60px;
+}
+.navbar{
+    font-size: 22px;
+    background-color: #26d5f0; 
+    margin-bottom: 20px;
+}
+.bebas, h5{
+    font-size: 50px;
+    font-family: 'Bebas Neue', cursive;
+}
+.card-body{
+    height: 190px;
+}
+.eyes-card{
+    position: absolute;
+    bottom: 5px;
+    width: calc(100% - 32px);
+    display: flex;
+    justify-content: center;
+}
+.card-body h5{
+    font-size: 26px;
+}
+.footer-icon{
+    font-size: 32px;
+}
+
+tbody tr td:nth-child(3) {
+    overflow: hidden;
+    text-overflow: ellipsis; /* permite aparecer " ... " no final da ultima linha à mostra*/
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Quantidade de linhas a mostrar*/
+    -webkit-box-orient:vertical;
+}
